@@ -1,0 +1,33 @@
+{
+  "name": "node_somali_restaurant_backend",
+  "version": "1.0.0",
+  "description": "the backend of a somali restaurant app",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliamuraayad/node_somali_restaurant_backend.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongo",
+    "db"
+  ],
+  "author": "Alia Muraayad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aliamuraayad/node_somali_restaurant_backend/issues"
+  },
+  "homepage": "https://github.com/aliamuraayad/node_somali_restaurant_backend#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
