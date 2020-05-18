@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const morgan = require('morgan');
 
 // Router files
 const restaurants = require('./routes/restaurants');
@@ -7,8 +8,16 @@ const restaurants = require('./routes/restaurants');
 
 // Load env var
 dotenv.config({ path: './config/config.env' });
+
 // initialize app variable with express
 const app = express();
+
+// dev logging middleware. we only want this to run if we're in the dev env
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'));
+} 
+//morgan() is a function, different parameters you can pass in, we pass in dev
+ 
 
 // Mount routers
 app.use('/api/v1/restaurants', restaurants);
