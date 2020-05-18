@@ -12,7 +12,9 @@ const app = express();
 
 // Mount routers
 app.use('/api/v1/restaurants', restaurants);
-// using this link will mean we no longer need to include it in that file
+//using the router file, stating the base url of every path
+//the router file is handling all requests to this route and middleware that is specific to this route
+// using this link will mean we no longer need to restate this path in every req
 
 //pass in port to whatever is env variable and if its not availanle for some reason, put in 5000
 const PORT = process.env.PORT || 5000;
