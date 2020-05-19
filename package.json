@@ -24,8 +24,10 @@
   },
   "homepage": "https://github.com/aliamuraayad/node_somali_restaurant_backend#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.9.14",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
