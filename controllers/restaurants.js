@@ -1,8 +1,10 @@
+const Restaurant = require('../models/Restaurant')
+
 // @desc    Get all restaurants
 // @route   GET /api/v1/restaurants
 // @access  Public (do you need to be authenticated?)
 exports.getRestaurants = (req, res, next) => {
-    res.status(200).json({ success: true, msg: 'Show all restaurants', hello: req.hello })
+    res.status(200).json({ success: true, msg: 'Show all restaurants' })
 }
 
 // @desc    Get restaurant by id
