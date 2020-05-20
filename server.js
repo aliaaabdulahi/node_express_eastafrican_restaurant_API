@@ -17,6 +17,9 @@ const restaurants = require('./routes/restaurants');
 // initialize app variable with express
 const app = express();
 
+// Body parser
+app.use(express.json())
+
 // dev logging middleware. we only want this to run if we're in the dev env
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
