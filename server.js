@@ -25,7 +25,6 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 } 
 //morgan() is a function, different parameters you can pass in, we pass in dev
- 
 
 // Mount routers
 app.use('/api/v1/restaurants', restaurants);
