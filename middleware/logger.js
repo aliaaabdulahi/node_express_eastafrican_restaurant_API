@@ -6,5 +6,4 @@ const logger = (req, res, next) => {
     next();
 }
 // in every piece of middleware created you need to include next() because that is what is running
-
 module.exports = logger;
