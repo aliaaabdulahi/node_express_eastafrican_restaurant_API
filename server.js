@@ -6,26 +6,20 @@ const colors = require('colors');
 
 // Load env var
 dotenv.config({ path: './config/config.env' });
-
 // Connect to database
 connectDB();
-
 // Router files
 const restaurants = require('./routes/restaurants');
 //requiring the router file
-
 // initialize app variable with express
 const app = express();
-
 // Body parser
 app.use(express.json())
-
 // dev logging middleware. we only want this to run if we're in the dev env
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 } 
 //morgan() is a function, different parameters you can pass in, we pass in dev
-
 // Mount routers
 app.use('/api/v1/restaurants', restaurants);
 //using the router file, stating the base url of every path
@@ -36,7 +30,6 @@ app.use('/api/v1/restaurants', restaurants);
 const PORT = process.env.PORT || 5000;
 // in order to run the server we need to call listen
 const server = app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold));
-
 //Handle unhandled promise rejection
 process.on('unhandledRejection', (err, promise) => {
     console.log(`Error: ${err.message}`.red);
