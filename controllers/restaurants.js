@@ -1,5 +1,4 @@
 const Restaurant = require('../models/Restaurant')
-
 // @desc    Get all restaurants
 // @route   GET /api/v1/restaurants
 // @access  Public (do you need to be authenticated?)
@@ -11,7 +10,6 @@ exports.getRestaurants = async (req, res, next) => {
         res.status(400).json({ success: false })
     }
 };
-
 // @desc    Get restaurant by id
 // @route   GET /api/v1/restaurants/:id
 // @access  Public (do you need to be authenticated?)
@@ -33,7 +31,6 @@ exports.getRestaurant = async (req, res, next) => {
 exports.createRestaurant = async (req, res, next) => {
     try {
         const restaurant = await Restaurant.create(req.body);
-
         res.status(201).json({
             success: true,
             data: restaurant
@@ -42,7 +39,6 @@ exports.createRestaurant = async (req, res, next) => {
         res.status(400).json( { success: false, message: err.message});
     }
 };
-
 // @desc    Update restaurant by id
 // @route   PUT /api/v1/restaurants/:id
 // @access  Private (do you need to be authenticated?)
@@ -62,7 +58,6 @@ exports.updateRestaurant = async (req, res, next) => {
         res.status(400).json( { success: false, message: err.message});
    }
 };
-
 // @desc    Delete restaurant by id
 // @route   DELETE /api/v1/restaurants/:id
 // @access  Private (do you need to be authenticated?)
